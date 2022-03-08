@@ -44,18 +44,6 @@ IF(OS_LINUX)
     SET(CMAKE_REQUIRED_FLAGS "${CMAKE_REQUIRED_FLAGS} -lc++")
 ENDIF(OS_LINUX)
 
-check_cxx_source_runs("
-#include <gtest/gtest.h>
-#include <gmock/gmock.h>
-int main(int argc, char *argv[])
-{
-  double pi = 3.14;
-  EXPECT_EQ(pi, 3.14);
-  return 0;
-}
-" GoogleTest_CHECK_FINE)
-message(STATUS "GoogleTest check: ${GoogleTest_CHECK_FINE}")
-
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(
     GoogleTest
