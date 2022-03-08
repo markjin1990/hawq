@@ -52,7 +52,7 @@ find_package_handle_standard_args(
     GMock_INCLUDE_DIR
     Gtest_LIBRARY
     Gmock_LIBRARY
-    GoogleTest_CHECK_FINE)
+)
 
 set(GoogleTest_INCLUDE_DIR ${GTest_INCLUDE_DIR} ${GMock_INCLUDE_DIR})
 set(GoogleTest_LIBRARIES ${Gtest_LIBRARY} ${Gmock_LIBRARY})
